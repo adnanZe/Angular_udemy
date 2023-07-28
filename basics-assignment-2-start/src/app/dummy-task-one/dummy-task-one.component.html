@@ -1,0 +1,7 @@
+<h4>Task 1</h4>
+<label
+  >username:
+  <input type="text" [(ngModel)]="username" />
+</label>
+<p>this is the username: {{ username }}</p>
+<button [disabled]="!username" (click)="onSend()">Send this username</button>
