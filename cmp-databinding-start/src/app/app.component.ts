@@ -26,8 +26,6 @@ export class AppComponent {
     serverName: string;
     serverContent: string;
   }) {
-    console.log('hit');
-
     this.serverElements.push({
       type: 'blueprint',
       name: blueprintData.serverName,
