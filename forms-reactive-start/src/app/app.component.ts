@@ -31,6 +31,11 @@ export class AppComponent implements OnInit {
 
     // this.signupForm.valueChanges.subscribe((value) => console.log(value));
     this.signupForm.statusChanges.subscribe((value) => console.log(value));
+    this.signupForm.patchValue({
+      userData: {
+        username: 'Adnan',
+      },
+    });
   }
 
   get controls() {
@@ -39,6 +44,7 @@ export class AppComponent implements OnInit {
 
   onSubmit(): void {
     console.log(this.signupForm);
+    this.signupForm.reset();
   }
 
   onAddHobby(): void {
