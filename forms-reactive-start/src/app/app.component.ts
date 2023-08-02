@@ -10,7 +10,7 @@ import { Observable } from 'rxjs';
 export class AppComponent implements OnInit {
   genders = ['male', 'female'];
   signupForm: FormGroup;
-  forbiddenUsernames = ['Chris', 'Anna'];
+  forbiddenUsernames = ['Test', 'Test2'];
 
   ngOnInit(): void {
     this.signupForm = new FormGroup({
