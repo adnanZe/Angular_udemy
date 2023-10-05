@@ -1,10 +1,10 @@
-import { Component } from '@angular/core';
-import { NgForm } from '@angular/forms';
-import { AuthService } from './auth.service';
+import { Component } from "@angular/core";
+import { NgForm } from "@angular/forms";
+import { AuthService } from "./auth.service";
 
 @Component({
-  selector: 'app-auth',
-  templateUrl: './auth.component.html'
+  selector: "app-auth",
+  templateUrl: "./auth.component.html",
 })
 export class AuthComponent {
   isLoginMode = true;
@@ -29,14 +29,16 @@ export class AuthComponent {
     if (this.isLoginMode) {
       // ...
     } else {
-
-      this.authService.singUp(email, password).subscribe(res => {
-        console.log(res);
-        this.isLoading = false;
-      }, error => {
-        this.error = 'An error occurred!'
-        this.isLoading = false;
-      }
+      this.authService.singUp(email, password).subscribe(
+        (res) => {
+          console.log(res);
+          this.isLoading = false;
+        },
+        (errorMessage) => {
+          console.error(errorMessage);
+          this.error = errorMessage;
+          this.isLoading = false;
+        }
       );
     }
 
