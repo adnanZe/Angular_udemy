@@ -44,4 +44,4 @@ import { AuthComponent } from './auth/auth.component';
   providers: [ShoppingListService, RecipeService],
   bootstrap: [AppComponent]
 })
-export class AppModule {}
+export class AppModule { }
