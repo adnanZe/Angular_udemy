@@ -9,7 +9,8 @@ export class CounterEffects {
             console.log(action);
             localStorage.setItem('count', action.value.toString());
         })
-    ));
+    ), { dispatch: false }
+    );
 
     constructor(private actions$: Actions) { }
 }
